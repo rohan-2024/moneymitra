@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE hibernate-configuration SYSTEM "https://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> -->
+
+	
+<hibernate-configuration>
+ <session-factory>
+ 
+ 
+  <property name="connection.driver_class">com.mysql.jdbc.Driver</property> 
+  <property name="connection.url" >jdbc:mysql://localhost:3306/expense?useSSL=false</property> 
+  <property name="connection.username" >root</property> 
+  <property name="connection.password" >root</property>
+    <property name="dialect" >org.hibernate.dialect.MySQL57Dialect</property> 
+   <property name="show_sql">true</property> 
+  <property name="hbm2ddl.auto">update</property> 
+  
+   <mapping class="com.expense.entity.Admin"/>
+  <mapping class="com.expense.entity.Category"/>
+  <mapping class="com.expense.entity.Expense"/>
+  
+  </session-factory>
+  </hibernate-configuration>
